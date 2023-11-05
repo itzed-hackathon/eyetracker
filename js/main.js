@@ -1,7 +1,7 @@
 function setupOverlay(canvas) {
     const ctx = canvas.getContext('2d');
-    const recWidth = 50 
-    const recHeight = 50
+    const recWidth = 300
+    const recHeight = 300
     const xPos = (canvas.width / 2) - (recWidth / 2);
     const yPos = (canvas.height / 2) - (recHeight / 2);
     ctx.fillStyle = "rgba(0, 0, 200, 0.25)";
@@ -48,8 +48,8 @@ window.onload = async function() {
         overlay.style.position = 'fixed';
         overlay.style.left = 0;
         overlay.style.top = 0;
-        overlay.style.width = window.innerWidth;
-        overlay.style.height = window.innerHeight;
+        overlay.width = window.innerWidth;
+        overlay.height = window.innerHeight;
         overlay.style.zIndex = 9000;
         setupOverlay(overlay);
         canvas.width = window.innerWidth;
