@@ -105,8 +105,10 @@ utils.loadOpenCv(() => {
                 (eyes.size() + last_eye_size.reduce((a, b) => a + b)) ?
                     console.log("Eyes are open")
                     :
-                    //console.log("Eyes are closed") 
-                    socket.send(JSON.stringify({ blink: 1 }))
+                    // console.log("Eyes are closed")
+                    (
+                    console.log("blkink"), socket.send(JSON.stringify({ blink: 1 }))
+                    )
                 :
                 console.log("No face detected")
 

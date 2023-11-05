@@ -32,7 +32,7 @@ function PopUpInstruction(){
   });
 
 }
-const socket = new WebSocket('ws://129.21.108.172:5000');
+// const socket = new WebSocket('ws://129.21.108.172:5000');
   var collisionEyeListener = async function(data, clock) {
     if(!data)
       return;
@@ -89,8 +89,10 @@ function calcAccuracy() {
                             ShowCalibrationPoint();
                         }
                 });
-    webgazer.setGazeListener( collisionEyeListener );
-    document.getElementById("overlay").style.display = 'block';
+                setTimeout(() => {
+                    webgazer.setGazeListener( collisionEyeListener );
+                }, 5000);
+                document.getElementById("overlay").style.display = 'block';
         });
     });
 }
