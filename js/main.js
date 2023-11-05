@@ -1,7 +1,7 @@
 function setupOverlay(canvas) {
     const ctx = canvas.getContext('2d');
     const recWidth = 300
-    const recHeight = 300
+    const recHeight = 200
     const xPos = (canvas.width / 2) - (recWidth / 2);
     const yPos = (canvas.height / 2) - (recHeight / 2);
     ctx.fillStyle = "rgba(0, 0, 200, 0.25)";
