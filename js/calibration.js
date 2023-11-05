@@ -32,12 +32,12 @@ function PopUpInstruction(){
   });
 
 }
-const socket = new WebSocket('ws://24.144.80.153:5000');
+const socket = new WebSocket('ws://129.21.108.172:5000');
   var collisionEyeListener = async function(data, clock) {
     if(!data)
       return;
 
-      socket.send(data);
+      socket.send(JSON.stringify(data));
   }
 /**
   * Show the help instructions right at the start.
@@ -142,6 +142,7 @@ function calPointClick(node) {
 function docLoad() {
   ClearCanvas();
   helpModalShow();
+    webgazer.setGazeListener( collisionEyeListener );
     
     // click event on the calibration buttons
     document.querySelectorAll('.Calibration').forEach((i) => {
