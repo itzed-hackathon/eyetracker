@@ -51,6 +51,7 @@ window.onload = async function() {
         overlay.width = window.innerWidth;
         overlay.height = window.innerHeight;
         overlay.style.zIndex = 9000;
+        overlay.style.display = 'none';
         setupOverlay(overlay);
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;

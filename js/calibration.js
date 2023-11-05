@@ -90,6 +90,7 @@ function calcAccuracy() {
                         }
                 });
     webgazer.setGazeListener( collisionEyeListener );
+    document.getElementById("overlay").style.display = 'block';
         });
     });
 }
