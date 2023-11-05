@@ -142,7 +142,7 @@ function calPointClick(node) {
 function docLoad() {
   ClearCanvas();
   helpModalShow();
-    webgazer.setGazeListener( collisionEyeListener );
+    // webgazer.setGazeListener( collisionEyeListener );
     
     // click event on the calibration buttons
     document.querySelectorAll('.Calibration').forEach((i) => {
