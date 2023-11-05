@@ -32,21 +32,12 @@ function PopUpInstruction(){
   });
 
 }
-
+const socket = new WebSocket('ws://24.144.80.153:5000');
   var collisionEyeListener = async function(data, clock) {
     if(!data)
       return;
 
-    console.log(data);
-    fetch('http://localhost:5000/eye', {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json',
-        },
-        body: JSON.stringify({
-            data
-        }),
-    });
+      socket.send(data);
   }
 /**
   * Show the help instructions right at the start.
